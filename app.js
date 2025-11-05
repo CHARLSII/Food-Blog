@@ -41,3 +41,16 @@ function generateCards(containerId, items) {
 }
 
 generateCards("cardContainer", dishes);
+
+// Overlay open/close logic with transition
+const overlay = document.getElementById("aboutOverlay");
+const aboutLink = document.getElementById("aboutLink");
+const closeBtn = document.getElementById("closeOverlay");
+
+aboutLink.addEventListener("click", () => {
+  overlay.classList.add("show"); // add class to trigger fade-in
+});
+
+closeBtn.addEventListener("click", () => {
+  overlay.classList.remove("show"); // remove class to trigger fade-out
+});
