@@ -77,4 +77,5 @@ document.getElementById("searchBtn").addEventListener("click", async () => {
 });
 
 // Run the API fetch
-fetchMeals();
+// Run only when page loads
+window.addEventListener("DOMContentLoaded", fetchMeals);
